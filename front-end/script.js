@@ -60,7 +60,8 @@ let add = () => {
 let remove = (i) => {
   fetch(`http://127.0.0.1:5501/delete/${i}`, {
   method: 'delete',
-  }).then(() => {
+  })
+  .then(() => {
     window.location.reload();
   })
 }
@@ -77,10 +78,10 @@ let modify = (i) => {
     },
   })
   .then((response) => {
-      return response.json();
+    return response.json();
   })
   .then((data) => {
-      console.log(data);
+    console.log(data);
   });
 }
 
