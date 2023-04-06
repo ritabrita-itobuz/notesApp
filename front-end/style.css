@@ -1,0 +1,84 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: bisque;
+    color: rgb(57, 13, 13);
+    overflow-x: hidden;
+}
+
+.head-section {
+    display: flex;
+}
+
+.other-symbols {
+    display: flex;
+    margin-left: 14rem;
+}
+
+.fa-battery-full {
+    margin-left: 0.3rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+.app-introduction img {
+    width: 10rem;
+    background: transparent;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+.app-introduction p{
+    color: rgb(109, 92, 69);
+    text-align: center;
+}
+
+.app-introduction button { 
+    margin-left: 6rem;
+    background-color: rgb(245, 114, 14);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.app-introduction a {
+    color: #ffffff;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.addtask {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+#task {
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.addtask button {
+    background-color: rgb(57, 13, 13);
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    color: #ffffff;
+    margin-left: -1rem;
+}
+
+.addedtasks button {
+    margin-left: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
