@@ -67,20 +67,20 @@ let remove = (i) => {
 
 let modify = (i) => {
   fetch(`http://127.0.0.1:5501/updatetask/${i}`, {
-  method: 'put',
-  body: JSON.stringify({
-    taskname: document.getElementById("entertask").value,
-    task: document.getElementById("describetask").value,
-  }),
-  headers: {
-    'Content-type': 'application/json',
-  },
-})
+    method: 'put',
+    body: JSON.stringify({
+      taskname: document.getElementById("entertask").value,
+      task: document.getElementById("describetask").value,
+    }),
+    headers: {
+      'Content-type': 'application/json',
+    },
+  })
   .then((response) => {
-    return response.json();
+      return response.json();
   })
   .then((data) => {
-    console.log(data);
+      console.log(data);
   });
 }
 
