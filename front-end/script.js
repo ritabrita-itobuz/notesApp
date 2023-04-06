@@ -1,4 +1,3 @@
-
 let display = () => {
   const url = "http://127.0.0.1:5501/read";
   fetch(url)
@@ -11,16 +10,17 @@ let display = () => {
       for (let i = 0; i < data.length; i++) {
         let id = data[i]._id;
         document.getElementById("addedtasks").innerHTML += 
-        `<ul style="">
-            <li>${data[i].taskname} -- ${data[i].task}
-            <button style="background-color: orange; border-top-left-radius:20%; 
-            border-top-right-radius:20%; border-bottom-left-radius:20%; border-bottom-right-radius:20%;
-            margin-left: 1rem" onclick="remove('${id}')">delete</button>
-            <button style="background-color: orange; border-top-left-radius:20%; 
-            border-top-right-radius:20%; border-bottom-left-radius:20%; border-bottom-right-radius:20%"
-            onclick="modify('${id}')">edit</button>
-            </li>
-        </ul>`;
+        `<div style="width: 18rem; background: #0B65E6;
+            background: -webkit-linear-gradient(top left, #0B65E6, #B5D9DD);
+            background: -moz-linear-gradient(top left, #0B65E6, #B5D9DD);
+            background: linear-gradient(to bottom right, #0B65E6, #B5D9DD);"
+            class="card border border-dark">
+            ${data[i].taskname} -- ${data[i].task}
+            <div class="buttons">
+              <button class="btn" onclick="modify('${id}')">Edit</button>
+              <button class="btn" style="" onclick="remove('${id}')">Delete</button>
+            </div>
+        </div>`;
       }
     });
 }
@@ -45,15 +45,18 @@ let add = () => {
     console.log(data._id);
     id = data._id;
     document.getElementById("addedtasks").innerHTML += 
-    `<ul>
-        <li>${document.getElementById("entertask").value} -- ${document.getElementById("describetask").value}
-        <button style="background-color: orange; border-top-left-radius:20%; border-top-right-radius:20%; 
-        border-bottom-left-radius:20%; border-bottom-right-radius:20%; margin-left: 1rem" onclick="remove('${id}')">delete</button>
-        <button style="background-color: orange; border-top-left-radius:20%; 
-        border-top-right-radius:20%; border-bottom-left-radius:20%; border-bottom-right-radius:20%"
-        onclick="modify('${id}')">edit</button>
-        </li>
-    </ul>`;
+    `<div style="width: 18rem; background: #0B65E6;
+        background: -webkit-linear-gradient(top left, #0B65E6, #B5D9DD);
+        background: -moz-linear-gradient(top left, #0B65E6, #B5D9DD);
+        background: linear-gradient(to bottom right, #0B65E6, #B5D9DD);"
+        class="card border border-dark">
+        ${document.getElementById("entertask").value} -- ${document.getElementById("describetask").value}
+        <div class="buttons">
+          <button class="btn" onclick="modify('${id}')">Edit</button>
+          <button class="btn" onclick="remove('${id}')">Delete</button>
+        </div>
+    </div>`
+    swal("task added");
   });
 }
 
@@ -62,7 +65,8 @@ let remove = (i) => {
   method: 'delete',
   })
   .then(() => {
-    window.location.reload();
+    document.getElementById("addedtasks").innerHTML = "";
+    display();
   })
 }
 
