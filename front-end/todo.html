@@ -16,15 +16,23 @@
 
     <p class="app-name">Notes App</p>
 
-    <section class="addtask">
+    <section class="addtask" id="addtask">
         <input type="text" placeholder="Enter new task" id="entertask">
         <input type="text" placeholder="Add something" id="describetask">
-        <button class="btn" id="submit" onclick="add()">Submit</button>
+        <button class="btn" id="submit" onclick="add()">Add</button>
     </section>
     
     <section class="list" id="addedtasks"></section>
+    <section id="edittask">
+        <div class="card edittask">
+            <input type="text" value="" id="edittitle" placeholder="edit taskname">
+            <input type="text" value = "" class="" id="edittext" placeholder="edit task">
+            <button class="btn btn-primary mt-3 mb-2" id="edit">Save</button>
+        </div>
+    </section>
 
     <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 </html>
