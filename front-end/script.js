@@ -62,7 +62,7 @@ let add = () => {
     Swal.fire({
       text: "task added",
       customClass: 'add-task',
-      timer: 2500
+      timer: 1500
     });
   });
 }
@@ -74,62 +74,42 @@ let remove = (i) => {
   .then(() => {
     Swal.fire({
       text: "task deleted",
-      customClass: 'delete-task'
+      customClass: 'delete-task',
+      timer: 1500
     });
     document.getElementById("addedtasks").innerHTML = "";
     display();
   })
 }
 
-// let modify = (i) => {
-//   fetch(`http://127.0.0.1:5501/updatetask/${i}`, {
-//     method: 'put',
-//     body: JSON.stringify({
-//       taskname: document.getElementById("entertask").value,
-//       task: document.getElementById("describetask").value,
-//     }),
-//     headers: {
-//       'Content-type': 'application/json',
-//     },
-//   })
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   });
-// }
-
 let showText = (j) => {
   console.log(j);
   document.getElementById("addedtasks").style.display = "none";
-  // document.getElementById("addtasks").style.display = "none";
   document.getElementById("edittask").style.display = "";
   document.getElementById("edit").addEventListener('click', () => {
-    // document.getElementById("addtasks").style.display = "";
     document.getElementById("addedtasks").style.display = "";
     document.getElementById("edittask").style.display="none";
+    update();
   })
-  console.log(document.getElementById("edittitle").value);
-  document.getElementById("taskname").value = document.getElementById("edittitle").value;
-  fetch(`http://127.0.0.1:5501/updatetask/${j}`, {
-    method: 'put',
-    body: JSON.stringify({
-      taskname: document.getElementById("edittitle").value,
-      task: document.getElementById("edittext").value,
-    }),
-    headers: {
-      'Content-type': 'application/json',
-    },
-  })
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-    console.log(document.getElementById("edittitle").value);
-  });
-  
+  let update = () => {
+    fetch(`http://127.0.0.1:5501/updatetask/${j}`, {
+      method: 'put',
+      body: JSON.stringify({
+        taskname: document.getElementById("edittitle").value,
+        task: document.getElementById("edittext").value,
+      }),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      document.getElementById("addedtasks").innerHTML = "";
+      display();
+    });
+  }  
 }
 
 
