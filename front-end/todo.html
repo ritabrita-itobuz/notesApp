@@ -25,23 +25,24 @@
         <button class="note-btn" id="submit" onclick="add()">Create</button>
     </section>
 
-    <section class="break">
+    <section class="break" id="breakline">
         <hr>
-        <label for="">Added notes</label>
+        <label for="" id="breaklabel">Added notes</label>
     </section>
 
     <section class="list" id="addedtasks"></section>
-    
+
     <section id="edittask">
         <div class="card edittask">
-            <input type="text" id="edittitle" placeholder="edit taskname">
-            <input type="text" class="" id="edittext" placeholder="edit task">
-            <button class="btn btn-primary mt-3 mb-2" id="edit">Save</button>
+            <label for="">Edit your note</label>
+            <hr>
+            <input type="text" id="edittitle" placeholder="Edit taskname">
+            <input type="text" class="" id="edittext" placeholder="Edit task">
+            <button class="save-button mt-3 mb-2" id="edit">Save</button>
         </div>
     </section>
 
     <script src="./script.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 </html>
