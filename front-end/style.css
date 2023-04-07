@@ -1,36 +1,71 @@
 body {
-    font-family: 'DM Sans', sans-serif;
-    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    --theme-bg: #3a0ca3;
+    background: var(--theme-bg);
     color: rgb(233, 239, 241);
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
 }
 
 .app-name {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
-    text-shadow: 1px 1px 1px #000, 3px 3px 4px #000851;
-    margin-top: 0.5rem;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.363), 3px 3px 4px #00085188;
+    font-weight: 800;
 }
 
-#entertask {
-    margin-left: 20rem;
+.addtask{
+    width: 45%;
+    margin: auto;
+    background-color: #9c91ff;
+    padding: 20px 15px;
+    border-radius: 5px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
 }
 
-.addtask button {
-    background-color: #023e8a;
-    border: 1px solid black;
+.addtask > label {
+    font-weight: 600;
+}
+.addtask > hr {
+    width: 40px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 18);
+
+}
+.addtask > input {
+    border: 0px!important;
+    outline: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid ;
+    margin-top: 8px;
+}
+
+.addtask .note-btn {
+    align-self: left;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    font-size: 12px;
+    background: var(--theme-bg);
     color: #ffffff;
-    margin-left: 1rem;
+    padding: 8px 15px;
+    margin-top: 25px;
 }
 
 .addtask button:hover {
-    background-color: #0077b6;
+    background-color: #491c51b1;
 }
 
 .list {
     margin-top: 1.2rem;
-    margin-left: 5rem;
+    margin-left: 1rem;
 }
 
 .list div {
@@ -48,14 +83,24 @@ body {
     transition-duration: 200ms;
 }
 
+.break > hr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.break > label {
+    margin-left: 2rem;
+    font-size: 1.7rem;
+}
+
 .card:hover {
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 1em 0.7em 1em rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
 }
 
 .buttons {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     margin-top: -1rem;
     margin-left: -4rem;
     margin-bottom: 1rem;
@@ -65,12 +110,19 @@ body {
     background-color: #0077b6;
 }
 
-.buttons:hover {
-    color: #ffffff;
+.edit-button:hover {
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.5em 0.7em 1em rgba(112, 224, 239, 0.609);
+    transform: scale(1.02);
+}
+
+.delete-button:hover {
+    box-shadow: 1em 0.6em 0.9em rgba(199, 119, 179, 0.514);
+    transform: scale(1.02);
 }
 
 #selected {
-    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 #edittask {
@@ -111,4 +163,5 @@ body {
     font-size: 0.7rem;
     background-image: url("./images/green-background.jpg");
 }
+
 
