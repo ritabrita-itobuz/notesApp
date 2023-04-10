@@ -80,7 +80,7 @@ body {
 }
 
 .addtask button:hover {
-    background-color: #491c51b1;
+    background-color: #4cc9f0;
 }
 
 .list {
@@ -90,11 +90,11 @@ body {
 
 .list div {
     display: flex;
-    margin-left: 18rem;
+    margin-left: 10rem;
     padding-left: 0.3rem;
     margin-bottom: 0.4rem;
     padding-top: 1rem;
-    width: 100rem;
+    /* width: 100rem; */
     color: #000;
 }
 
@@ -140,6 +140,42 @@ body {
     transform: scale(1.02);
 }
 
+.confirm-box {
+    margin-top: -15rem;
+    margin-left: 32rem;
+    margin-right: 17rem;
+    font-size: 0.7rem;
+    padding: 2rem;
+    background-color: #4cc9f0;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -3rem;
+}
+
+.confirm-button {
+    border: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    padding: 0.6rem;
+}
+
+.delete {
+    background-color: #b251ee;
+}
+
+.cancel:hover {
+    box-shadow: 1em 0.6em 0.9em rgba(19, 18, 19, 0.514);
+}
+
+.delete:hover {
+    color:rgb(233, 239, 241);
+    box-shadow: 1em 0.6em 0.9em rgba(19, 18, 19, 0.514);
+}
+
 #selected {
     margin-top: 1rem;
     margin-left: 1rem;
@@ -150,6 +186,16 @@ body {
     margin: auto;
     margin-top: 1rem;
     padding-left: -3rem;
+}
+
+#edittask > img {
+    margin-left: 2rem;
+    width: 15%;
+}
+
+#edittask > label {
+    font-size: 1.5rem;
+    margin-left: 0.6rem;
 }
 
 #edittask > .card {
@@ -203,7 +249,7 @@ body {
 }
 
 .save-button:hover {
-    box-shadow: 1em 0.6em 0.9em rgba(199, 119, 179, 0.514);
+    background-color: #4cc9f0;
     transform: scale(1.02);
 }
 
@@ -220,5 +266,7 @@ body {
     font-size: 0.7rem;
     background-image: url("./images/green-background.jpg");
 }
+
+
 
 

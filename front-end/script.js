@@ -1,5 +1,7 @@
 document.getElementById("edittask").style.display="none";
 
+let fetchedTitle = "";
+
 let display = () => {
   const url = "http://127.0.0.1:5501/read";
   fetch(url)
@@ -48,10 +50,10 @@ let add = () => {
     console.log(data._id);
     id = data._id;
     document.getElementById("addedtasks").innerHTML += 
-    `<div style="width: 18rem; background-color: #dd4489b1"
+    `<div style="width: 18rem; margin-top: 1rem; background-color: #dd4489b1"
         class="card border border-dark" id="selected">
         <p id="taskname">${document.getElementById("entertask").value}</p><p id="task">${document.getElementById("describetask").value}</p>
-        <div class="buttons" style = "margin-top: -4rem">
+        <div class="buttons" style = "margin-top: -4rem; margin-bottom: 1.6rem">
           <button class="btn edit-button" onclick="showText('${id}')">
             <img src="./images/edit.png" style="width: 1rem; height: 1rem">
           </button>
@@ -60,7 +62,6 @@ let add = () => {
               </button>
         </div>
     </div>`;
-    document.getElementById("entertask").textContent = "";
     Swal.fire({
       text: "task added",
       customClass: 'add-task',
@@ -70,17 +71,28 @@ let add = () => {
 }
 
 let remove = (i) => {
+  document.getElementById("addedtasks").innerHTML += 
+  `     <section class="card confirm-box" id="confirm">
+          <h4>Are you sure to delete it? </h4>
+          <div class="confirm-buttons">
+              <button class="confirm-button cancel" id="confirmCancel">CANCEL</button>
+              <button class="confirm-button delete" id="confirmDelete">DELETE</button>
+          </div>
+        </section>`;
+
+document.getElementById('confirmDelete').addEventListener('click', () => {
   fetch(`http://127.0.0.1:5501/delete/${i}`, {
-  method: 'delete',
+    method: 'delete',
+    })
+    .then(() => {
+      document.getElementById("addedtasks").innerHTML = "";
+      display();
+    })
   })
-  .then(() => {
-    Swal.fire({
-      text: "task deleted",
-      customClass: 'delete-task',
-      timer: 1500
-    });
-    document.getElementById("addedtasks").innerHTML = "";
-    display();
+
+document.getElementById('confirmCancel').addEventListener('click', () => {
+  document.getElementById('addedtasks').innerHTML = "";
+  display();
   })
 }
 
