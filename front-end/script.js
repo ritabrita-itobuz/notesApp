@@ -3,6 +3,7 @@ document.getElementById("edittask").style.display="none";
 let fetchedTitle = "";
 
 let display = () => {
+
   const url = "http://127.0.0.1:5501/read";
   fetch(url)
     .then((response) => {
@@ -49,10 +50,11 @@ let add = () => {
     console.log(data);
     console.log(data._id);
     id = data._id;
-    document.getElementById("breakline").innerHTML +=
-    `<section class="card showNote" id = "show">
+
+    document.getElementById("displayNote").innerHTML = 
+    `<section class="card showNote showAddNote" id = "show">
       <h4>Added Successfully!</h4>
-     </section> `;
+    </section>`;
 
     document.getElementById("addedtasks").innerHTML += 
     `<div style="width: 18rem; margin-top: 1rem; background-color: #dd4489b1"
@@ -64,15 +66,15 @@ let add = () => {
           </button>
           <button class="btn delete-button" style="background-color: #7209b5" onclick="remove('${id}')">
                 <img src="./images/delete.png" style="width: 1rem; height: 1.4rem">
-              </button>
+          </button>
         </div>
-    </div>`;
-    setTimeout(vanish, 2000);
+      </div>`;
+    document.getElementById("entertask").value = "";
+    document.getElementById("describetask").value = "";
+    window.addEventListener('click', () => {
+      document.getElementById("show").style.display = "none";
+    })
   })
-
-  let vanish = () => {
-    document.getElementById("show").style.display = "none";
-  }
 }
 
 let remove = (i) => {
@@ -99,16 +101,15 @@ let remove = (i) => {
         `<section class="card showNote" id = "show">
           <h4>Deleted Successfully!</h4>
         </section>`;
-        setTimeout(vanish, 2000);
+        let vanishDelete = () => {
+          document.getElementById("show").style.display = "none";
+        }
+        setTimeout(vanishDelete, 2000);
         window.addEventListener('click', () => {
           document.getElementById("show").style.display = "none";
         })
       })
     })
-
-    let vanish = () => {
-      document.getElementById("show").style.display = "none";
-    }
 
   document.getElementById('confirmCancel').addEventListener('click', () => {
     document.getElementById('addedtasks').innerHTML = "";
