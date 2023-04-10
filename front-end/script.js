@@ -49,6 +49,11 @@ let add = () => {
     console.log(data);
     console.log(data._id);
     id = data._id;
+    document.getElementById("breakline").innerHTML +=
+    `<section class="card showNote" id = "show">
+      <h4>Added Successfully!</h4>
+     </section> `;
+
     document.getElementById("addedtasks").innerHTML += 
     `<div style="width: 18rem; margin-top: 1rem; background-color: #dd4489b1"
         class="card border border-dark" id="selected">
@@ -62,7 +67,12 @@ let add = () => {
               </button>
         </div>
     </div>`;
-  });
+    setTimeout(vanish, 2000);
+  })
+
+  let vanish = () => {
+    document.getElementById("show").style.display = "none";
+  }
 }
 
 let remove = (i) => {
@@ -76,20 +86,34 @@ let remove = (i) => {
           </div>
         </section>`;
 
-document.getElementById('confirmDelete').addEventListener('click', () => {
-  fetch(`http://127.0.0.1:5501/delete/${i}`, {
-    method: 'delete',
+  document.getElementById('confirmDelete').addEventListener('click', () => {
+    fetch(`http://127.0.0.1:5501/delete/${i}`, {
+      method: 'delete',
+      })
+      .then(() => {
+        document.getElementById("addedtasks").innerHTML = "";
+        display();
+      })
+      .then(() => {
+        document.getElementById("addedtasks").innerHTML += 
+        `<section class="card showNote" id = "show">
+          <h4>Deleted Successfully!</h4>
+        </section>`;
+        setTimeout(vanish, 2000);
+        window.addEventListener('click', () => {
+          document.getElementById("show").style.display = "none";
+        })
+      })
     })
-    .then(() => {
-      document.getElementById("addedtasks").innerHTML = "";
-      display();
-    })
-  })
 
-document.getElementById('confirmCancel').addEventListener('click', () => {
-  document.getElementById('addedtasks').innerHTML = "";
-  display();
-  })
+    let vanish = () => {
+      document.getElementById("show").style.display = "none";
+    }
+
+  document.getElementById('confirmCancel').addEventListener('click', () => {
+    document.getElementById('addedtasks').innerHTML = "";
+    display();
+    })
 }
 
 let showText = (j) => {
@@ -122,7 +146,21 @@ let showText = (j) => {
     .then((data) => {
       document.getElementById("addedtasks").innerHTML = "";
       display();
-    });
+    })
+    .then(() => {
+      document.getElementById("addedtasks").innerHTML += 
+      `<section class="card showNote" id = "show">
+        <h4>Updated Successfully!</h4>
+       </section>`;
+      setTimeout(vanish, 2000);
+      window.addEventListener('click', () => {
+        document.getElementById("show").style.display = "none";
+      })
+    })    
+
+    let vanish = () => {
+      document.getElementById("show").style.display = "none";
+    }
   }  
 }
 
