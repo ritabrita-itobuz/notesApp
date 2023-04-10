@@ -62,11 +62,6 @@ let add = () => {
               </button>
         </div>
     </div>`;
-    Swal.fire({
-      text: "task added",
-      customClass: 'add-task',
-      timer: 1500
-    });
   });
 }
 
@@ -74,6 +69,7 @@ let remove = (i) => {
   document.getElementById("addedtasks").innerHTML += 
   `     <section class="card confirm-box" id="confirm">
           <h4>Are you sure to delete it? </h4>
+          <img src="./images/sad.png" style="width: 25%">
           <div class="confirm-buttons">
               <button class="confirm-button cancel" id="confirmCancel">CANCEL</button>
               <button class="confirm-button delete" id="confirmDelete">DELETE</button>
