@@ -16,7 +16,7 @@ let display = () => {
         let id = data[i]._id;
         document.getElementById("addedtasks").innerHTML += 
         `<div style="width: 18rem; height: 7rem; background-color: #dd4489b1"
-            class="card border border-dark" id="selected">
+            class="card border border-dark note" id="selected">
             <p id="taskname">${data[i].taskname}</p><p id="task">${data[i].task}</p>
             <div class="buttons" style = "margin-top: -4rem">
               <button class="btn edit-button" onclick="showText('${id}')">
@@ -78,10 +78,10 @@ let add = () => {
 }
 
 let remove = (i) => {
-  document.getElementById("addedtasks").innerHTML += 
+  document.getElementById("displayNote").innerHTML = 
   `     <section class="card confirm-box" id="confirm">
           <h4>Are you sure to delete it? </h4>
-          <img src="./images/sad.png" style="width: 25%">
+          <img src="./images/sad.png" style="">
           <div class="confirm-buttons">
               <button class="confirm-button cancel" id="confirmCancel">CANCEL</button>
               <button class="confirm-button delete" id="confirmDelete">DELETE</button>
@@ -108,8 +108,7 @@ let remove = (i) => {
     })
 
   document.getElementById('confirmCancel').addEventListener('click', () => {
-    document.getElementById('addedtasks').innerHTML = "";
-    display();
+    document.getElementById('displayNote').innerHTML = "";
     })
 }
 
@@ -118,12 +117,12 @@ let showText = (j) => {
   document.getElementById("addedtasks").style.display = "none";
   document.getElementById("edittask").style.display = "";
   document.getElementById("breaklabel").style.display="none";
-  document.getElementById("addtask").style.display="none";
+  document.getElementById("addnote").style.display="none";
   document.getElementById("edit").addEventListener('click', () => {
     document.getElementById("addedtasks").style.display = "";
     document.getElementById("edittask").style.display="none";
     document.getElementById("breaklabel").style.display="";
-    document.getElementById("addtask").style.display="";
+    document.getElementById("addnote").style.display="";
     update();
   })
   let update = () => {
