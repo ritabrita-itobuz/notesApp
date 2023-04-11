@@ -118,6 +118,7 @@ let showText = (j) => {
   document.getElementById("edittask").style.display = "";
   document.getElementById("breaklabel").style.display="none";
   document.getElementById("addnote").style.display="none";
+  // document.getElementById("edittitle").value = document.querySelector("#entertask").value;
   document.getElementById("edit").addEventListener('click', () => {
     document.getElementById("addedtasks").style.display = "";
     document.getElementById("edittask").style.display="none";
