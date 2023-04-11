@@ -97,14 +97,10 @@ let remove = (i) => {
         display();
       })
       .then(() => {
-        document.getElementById("addedtasks").innerHTML += 
+        document.getElementById("displayNote").innerHTML = 
         `<section class="card showNote" id = "show">
           <h4>Deleted Successfully!</h4>
         </section>`;
-        let vanishDelete = () => {
-          document.getElementById("show").style.display = "none";
-        }
-        setTimeout(vanishDelete, 2000);
         window.addEventListener('click', () => {
           document.getElementById("show").style.display = "none";
         })
@@ -149,19 +145,14 @@ let showText = (j) => {
       display();
     })
     .then(() => {
-      document.getElementById("addedtasks").innerHTML += 
+      document.getElementById("displayNote").innerHTML = 
       `<section class="card showNote" id = "show">
         <h4>Updated Successfully!</h4>
        </section>`;
-      setTimeout(vanish, 2000);
       window.addEventListener('click', () => {
         document.getElementById("show").style.display = "none";
       })
     })    
-
-    let vanish = () => {
-      document.getElementById("show").style.display = "none";
-    }
   }  
 }
 
