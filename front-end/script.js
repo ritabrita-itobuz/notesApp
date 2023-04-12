@@ -20,10 +20,10 @@ let display = () => {
             <p id = "taskname">${data[i].taskname}</p><p id = "task">${data[i].task}</p>
             <div class = "buttons" style = "margin-top: -4rem">
               <button class = "btn edit-button" onclick = "showText('${id}')">
-                <img src = "./images/edit.png" style = "width: 1rem; height: 1rem">
+                <img src = "./images/edit.png" alt = "edit icon" style = "width: 1rem; height: 1rem">
               </button>
               <button class = "btn delete-button" style = "background-color: #7209b5" onclick = "remove('${id}')">
-                <img src = "./images/delete.png" style = "width: 1rem; height: 1.4rem">
+                <img src = "./images/delete.png" alt = "delete icon" style = "width: 1rem; height: 1.4rem">
               </button>
             </div>
         </div>`;
@@ -66,10 +66,10 @@ let add = () => {
         }</p><p id = "task">${document.getElementById("describetask").value}</p>
         <div class = "buttons" style = "margin-top: -4rem; margin-bottom: 1.6rem">
           <button class = "btn edit-button" onclick = "showText('${id}')">
-            <img src = "./images/edit.png" style = "width: 1rem; height: 1rem">
+            <img src = "./images/edit.png" alt = "edit icon" style = "width: 1rem; height: 1rem">
           </button>
           <button class = "btn delete-button" style = "background-color: #7209b5" onclick = "remove('${id}')">
-                <img src = "./images/delete.png" style = "width: 1rem; height: 1.4rem">
+                <img src = "./images/delete.png" alt = "delete icon" style = "width: 1rem; height: 1.4rem">
           </button>
         </div>
       </div>`;
@@ -86,7 +86,7 @@ let remove = (i) => {
     "displayNote"
   ).innerHTML = `     <section class = "card confirm-box" id="confirm">
           <h4>Are you sure to delete it? </h4>
-          <img src = "./images/sad.png" style = "">
+          <img src = "./images/sad.png" alt = "sad face" style = "">
           <div class = "confirm-buttons">
               <button class = "confirm-button cancel" id = "confirmCancel">CANCEL</button>
               <button class = "confirm-button delete" id = "confirmDelete">DELETE</button>
