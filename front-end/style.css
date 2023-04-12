@@ -1,487 +1,485 @@
 body {
-    --theme-bg: #3a0ca3;
-    background: var(--theme-bg);
-    color: rgb(233, 239, 241);
-    font-family: 'Raleway', sans-serif;
-    overflow-x: hidden;
+  --theme-bg: #3a0ca3;
+  background: var(--theme-bg);
+  color: rgb(233, 239, 241);
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
 }
 
 .app-name {
-    font-size: 2.5rem;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.363), 3px 3px 4px #00085188;
-    font-weight: 800;
+  font-size: 2.5rem;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.363), 3px 3px 4px #00085188;
+  font-weight: 800;
 }
 
-.addtask{
-    width: 70%;
-    margin: auto;
-    background-color: #9c91ff;
-    padding: 20px 15px;
-    border-radius: 5px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-   
+.addtask {
+  width: 70%;
+  margin: auto;
+  background-color: #9c91ff;
+  padding: 20px 15px;
+  border-radius: 5px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .addtask > label {
-    font-weight: 600;
+  font-weight: 600;
 }
 .addtask > hr {
-    width: 40px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: rgb(0, 0, 18);
-
+  width: 40px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 18);
 }
 .addtask > input {
-    border: 0px!important;
-    outline: 0;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid ;
-    margin-top: 8px;
+  border: 0px !important;
+  outline: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  margin-top: 8px;
 }
 
 .addtask .note-btn {
-    align-self: left;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    font-size: 12px;
-    background: var(--theme-bg);
-    color: #ffffff;
-    padding: 8px 15px;
-    margin-top: 25px;
+  align-self: left;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  font-size: 12px;
+  background: var(--theme-bg);
+  color: #ffffff;
+  padding: 8px 15px;
+  margin-top: 25px;
 }
 
 .addtask button:hover {
-    background-color: #4cc9f0;
+  background-color: #4cc9f0;
 }
 
 .list {
-    margin-top: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 .list div {
-    display: flex;
-    margin-left: 10rem;
-    padding-left: 0.3rem;
-    margin-bottom: 0.4rem;
-    padding-top: 1rem;
-    color: #000;
+  display: flex;
+  margin-left: 10rem;
+  padding-left: 0.3rem;
+  margin-bottom: 0.4rem;
+  padding-top: 1rem;
+  color: #000;
 }
 
 .list div:hover {
-    transform: scale(1.01) ease-in-out;
-    transition-duration: 200ms;
+  transform: scale(1.01) ease-in-out;
+  transition-duration: 200ms;
 }
 
 .break > hr {
-    margin-left: 2rem;
-    margin-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .break > label {
-    margin-left: 2rem;
-    font-size: 1.7rem;
+  margin-left: 2rem;
+  font-size: 1.7rem;
 }
 
 .card:hover {
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 1em 0.7em 1em rgba(0, 0, 0, 0.3);
-    transform: scale(1.01);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    1em 0.7em 1em rgba(0, 0, 0, 0.3);
+  transform: scale(1.01);
 }
 
 .buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: -1rem;
-    margin-left: -4rem;
-    margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: -1rem;
+  margin-left: -4rem;
+  margin-bottom: 1rem;
 }
 
 .buttons .btn {
-    background-color: #0077b6;
+  background-color: #0077b6;
 }
 
 .edit-button:hover {
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.5em 0.7em 1em rgba(112, 224, 239, 0.609);
-    transform: scale(1.02);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.5em 0.7em 1em rgba(112, 224, 239, 0.609);
+  transform: scale(1.02);
 }
 
 .delete-button:hover {
-    box-shadow: 1em 0.6em 0.9em rgba(199, 119, 179, 0.514);
-    transform: scale(1.02);
+  box-shadow: 1em 0.6em 0.9em rgba(199, 119, 179, 0.514);
+  transform: scale(1.02);
 }
 
 .confirm-box {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 0.7rem;
-    padding: 2rem;
-    background-color: #4cc9f0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 0.7rem;
+  padding: 2rem;
+  background-color: #4cc9f0;
 }
 
 .confirm-box > img {
-    width: 25%;
+  width: 25%;
 }
 
 .confirm-buttons {
-    display: flex;
-    margin-top: -4rem;
-    margin-left: 5rem;
-    gap: 1rem;
+  display: flex;
+  margin-top: -4rem;
+  margin-left: 5rem;
+  gap: 1rem;
 }
 
 .confirm-button {
-    border: none;
-    border-radius: 4px;
-    margin-top: 1rem;
-    margin-bottom: -1rem;
-    padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+  padding: 0.6rem;
 }
 
 .delete {
-    background-color: #b251ee;
+  background-color: #b251ee;
 }
 
 .cancel:hover {
-    box-shadow: 1em 0.6em 0.9em rgba(19, 18, 19, 0.514);
+  box-shadow: 1em 0.6em 0.9em rgba(19, 18, 19, 0.514);
 }
 
 .delete:hover {
-    color:rgb(233, 239, 241);
-    box-shadow: 1em 0.6em 0.9em rgba(19, 18, 19, 0.514);
+  color: rgb(233, 239, 241);
+  box-shadow: 1em 0.6em 0.9em rgba(19, 18, 19, 0.514);
 }
 
 #selected {
-    margin-top: 1rem;
-    margin-left: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 #displayNote {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .showNote {
-    background-color: #4361ee;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.4rem;
+  background-color: #4361ee;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.4rem;
 }
 
 #edittask {
-    width: 70%;
-    margin: auto;
-    margin-top: 1rem;
-    padding-left: -3rem;
+  width: 70%;
+  margin: auto;
+  margin-top: 1rem;
+  padding-left: -3rem;
 }
 
 #edittask > img {
-    margin-left: 5rem;
-    width: 30%;
+  margin-left: 5rem;
+  width: 30%;
 }
 
 #edittask > label {
-    font-size: 1.5rem;
-    text-align: center;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 #edittask > .card {
-    background-color: #e773ad6b;
-    margin-top: 1rem;
+  background-color: #e773ad6b;
+  margin-top: 1rem;
 }
 
 #edittask > .card > label {
-    margin-top: 0.7rem;
-    margin-left: 0.6rem;
-    font-size: 1.4rem;
+  margin-top: 0.7rem;
+  margin-left: 0.6rem;
+  font-size: 1.4rem;
 }
 
 #edittask > .card > input {
-    background-color: #38307ebd;
-    border: 0px;
-    border-radius: 3px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 5px 8px;
+  background-color: #38307ebd;
+  border: 0px;
+  border-radius: 3px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 5px 8px;
 }
 
 #edittask > .card > input::placeholder {
-    color: #bcb0b0eb;
+  color: #bcb0b0eb;
 }
 
 #edittask button {
-    margin-top: 1rem;
-    width: 5rem;
-    margin: auto;
+  margin-top: 1rem;
+  width: 5rem;
+  margin: auto;
 }
 
 #edittitle {
-    margin-top: 1rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
+  margin-top: 1rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 #edittext {
-    margin-top: 1rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-    height: 3rem;
+  margin-top: 1rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  height: 3rem;
 }
 
 #edittask .save-button {
-    background-color: #f7258496;
-    border: 0px;
-    border-radius: 3px;
-    padding: 5px 10px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  background-color: #f7258496;
+  border: 0px;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .save-button:hover {
-    background-color: #4cc9f0;
-    transform: scale(1.02);
+  background-color: #4cc9f0;
+  transform: scale(1.02);
 }
 
 .add-task {
-    width: 12rem;
-    color: #ffffff;
-    font-size: 0.7rem;
-    background-image: url("./images/blue-background.jpg");
+  width: 12rem;
+  color: #ffffff;
+  font-size: 0.7rem;
+  background-image: url("./images/blue-background.jpg");
 }
 
 .delete-task {
-    width: 12rem;
-    color: #ffffff;
-    font-size: 0.7rem;
-    background-image: url("./images/green-background.jpg");
+  width: 12rem;
+  color: #ffffff;
+  font-size: 0.7rem;
+  background-image: url("./images/green-background.jpg");
 }
 
 @media screen and (min-width: 375px) {
-    .addtask {
-        width: 90%;
-    }
+  .addtask {
+    width: 90%;
+  }
 
-    .list {
-        margin-left: 1rem;
-    }
+  .list {
+    margin-left: 1rem;
+  }
 
-    #edittask {
-        width: 90%;
-    }
+  #edittask {
+    width: 90%;
+  }
 
-    #edittask img {
-        width: 15%;
-        margin-left: 1rem;
-    }
-    
-    #edittask > label {
-        font-size: 1rem;
-    }
+  #edittask img {
+    width: 15%;
+    margin-left: 1rem;
+  }
 
-    #edittask > .card {
-        margin-top: -0.1rem;
-    }
+  #edittask > label {
+    font-size: 1rem;
+  }
+
+  #edittask > .card {
+    margin-top: -0.1rem;
+  }
 }
 
 @media screen and (min-width: 425px) {
-    .app-name {
-        animation: cursor 1s step-start infinite, 
-        text 3s steps(20) alternate infinite;
-    }
+  .app-name {
+    animation: cursor 1s step-start infinite,
+      text 3s steps(20) alternate infinite;
+  }
 
-    @keyframes cursor {
-        0%, 100% { 
-        border-color: #212121; 
-        margin-left: 5rem;
-      }
+  @keyframes cursor {
+    0%,
+    100% {
+      border-color: #212121;
+      margin-left: 5rem;
     }
-    
-    @keyframes text {
-        0% { 
-        width: 0; 
-      }
-        100% { 
-        width: 20rem; 
-      }
+  }
+
+  @keyframes text {
+    0% {
+      width: 0;
     }
+    100% {
+      width: 20rem;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .addtask {
+    width: 70%;
+  }
 
-    .addtask {
-        width: 70%;
+  @keyframes cursor {
+    0%,
+    100% {
+      border-color: #212121;
+      margin-left: 17rem;
     }
+  }
 
-    @keyframes cursor {
-        0%, 100% { 
-        border-color: #212121; 
-        margin-left: 17rem;
-      }
-    }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .confirm-box {
+    width: 70%;
+    margin-left: 2rem;
+    margin-right: 6rem;
+  }
 
-    .confirm-box {
-        width: 70%;
-        margin-left: 2rem;
-        margin-right: 6rem;
-    }
+  .confirm-box > img {
+    margin-left: -2rem;
+  }
 
-    .confirm-box > img {
-        margin-left: -2rem;
-    }
+  .confirm-buttons {
+    margin-left: 6rem;
+    gap: 1.5rem;
+  }
 
-    .confirm-buttons {
-        margin-left: 6rem;
-        gap: 1.5rem;
-    }
+  .confirm-button {
+    padding: 1rem;
+    margin-top: -1rem;
+    margin-left: -0.5rem;
+  }
 
-    .confirm-button {
-        padding: 1rem;
-        margin-top: -1rem;
-        margin-left: -0.5rem;
-    }
+  #displayNote {
+    margin-top: 2rem;
+  }
 
-    #displayNote {
-        margin-top: 2rem;
-    }
+  .showNote {
+    padding-left: 12rem;
+  }
 
-    .showNote {
-        padding-left: 12rem;
-    }
+  #edittask {
+    width: 70%;
+  }
 
-    #edittask {
-        width: 70%;
-    }
-
-    #edittask > label {
-        font-size: 1.5rem;
-    }
+  #edittask > label {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .app-name {
-        font-size: 4rem;
-    }
+  .app-name {
+    font-size: 4rem;
+  }
 
-    @keyframes cursor {
-        0%, 100% { 
-        border-color: #212121; 
-        margin-left: 18rem;
-      }
+  @keyframes cursor {
+    0%,
+    100% {
+      border-color: #212121;
+      margin-left: 18rem;
     }
+  }
 
-    @keyframes text {
-        0% { 
-        width: 0; 
-      }
-        100% { 
-        width: 25rem; 
-      }
+  @keyframes text {
+    0% {
+      width: 0;
     }
+    100% {
+      width: 25rem;
+    }
+  }
 
-    .addtask {
-        width: 60%;
-    }
+  .addtask {
+    width: 60%;
+  }
 
-    .addtask > label {
-        font-size: 2rem;
-    }
+  .addtask > label {
+    font-size: 2rem;
+  }
 
-    .addtask > input {
-        padding: 0.5rem;
-    }
+  .addtask > input {
+    padding: 0.5rem;
+  }
 
-    .addtask .note-btn {
-        padding: 10px 25px;
-        font-size: 1rem;
-    }
+  .addtask .note-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
 
-    .break > label {
-        font-size: 2.5rem;
-    }
+  .break > label {
+    font-size: 2.5rem;
+  }
 
-    .showNote {
-        padding-left: 25rem;
-    }
+  .showNote {
+    padding-left: 25rem;
+  }
 
-    .confirm-box > h4 {
-        font-size: 2rem;
-        padding-right: -3rem;
-        margin-top: -0.7rem;
-    }
+  .confirm-box > h4 {
+    font-size: 2rem;
+    padding-right: -3rem;
+    margin-top: -0.7rem;
+  }
 
-    .confirm-box > img{
-        margin-top: -0.7rem;
-        width: 20%;
-        margin-bottom: 1rem;
-    }
+  .confirm-box > img {
+    margin-top: -0.7rem;
+    width: 20%;
+    margin-bottom: 1rem;
+  }
 
-    .confirm-buttons {
-        margin-left: 10rem;
-        margin-top: -5rem;
-    }
+  .confirm-buttons {
+    margin-left: 10rem;
+    margin-top: -5rem;
+  }
 
-    .confirm-button {
-        font-size: 1rem;
-    }
+  .confirm-button {
+    font-size: 1rem;
+  }
 
-    #edittask {
-        width: 65%;
-    }
+  #edittask {
+    width: 65%;
+  }
 
-    #edittask > label {
-        font-size: 1.6rem;
-    }
+  #edittask > label {
+    font-size: 1.6rem;
+  }
 
-    #edittask .save-button {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        text-transform: uppercase;
-    }
+  #edittask .save-button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .app-name {
+    font-size: 3.5rem;
+  }
 
-    .app-name {
-        font-size: 3.5rem;
+  @keyframes cursor {
+    0%,
+    100% {
+      border-color: #212121;
+      margin-left: 35rem;
     }
+  }
 
-    @keyframes cursor {
-        0%, 100% { 
-        border-color: #212121; 
-        margin-left: 35rem;
-      }
-    }
+  .addtask {
+    width: 45%;
+  }
 
-    .addtask {
-        width: 45%;
-    }
+  .break {
+    margin-top: 2rem;
+  }
 
-    .break {
-        margin-top: 2rem;
-    }
+  .showNote {
+    padding-left: 40rem;
+  }
 
-    .showNote {
-        padding-left: 40rem;
-    }
-
-    #edittask {
-        width: 45%;
-    }
+  #edittask {
+    width: 45%;
+  }
 }
-
-
-
-
