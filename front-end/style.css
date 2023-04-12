@@ -373,14 +373,14 @@ body {
 
 @media screen and (min-width: 1024px) {
   .app-name {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   @keyframes cursor {
     0%,
     100% {
       border-color: #212121;
-      margin-left: 18rem;
+      margin-left: 23rem;
     }
   }
 
@@ -394,11 +394,11 @@ body {
   }
 
   .addtask {
-    width: 60%;
+    width: 45%;
   }
 
   .addtask > label {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .addtask > input {
@@ -406,12 +406,12 @@ body {
   }
 
   .addtask .note-btn {
-    padding: 10px 25px;
+    padding: 8px 25px;
     font-size: 1rem;
   }
 
   .break > label {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .showNote {
@@ -419,32 +419,32 @@ body {
   }
 
   .confirm-box > h4 {
-    font-size: 2rem;
+    font-size: 1rem;
     padding-right: -3rem;
     margin-top: -0.7rem;
   }
 
   .confirm-box > img {
-    margin-top: -0.7rem;
-    width: 20%;
+    margin-top: -0.5rem;
+    width: 10%;
     margin-bottom: 1rem;
   }
 
   .confirm-buttons {
-    margin-left: 10rem;
-    margin-top: -5rem;
+    margin-left: 4rem;
+    margin-top: -3rem;
   }
 
   .confirm-button {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 
   #edittask {
-    width: 65%;
+    width: 45%;
   }
 
   #edittask > label {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   #edittask .save-button {
