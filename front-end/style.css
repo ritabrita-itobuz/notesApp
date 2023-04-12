@@ -15,7 +15,7 @@ body {
   font-weight: 800;
 }
 
-.addtask {
+.addTask {
   width: 70%;
   margin: auto;
   background-color: #9c91ff;
@@ -27,16 +27,16 @@ body {
   flex-direction: column;
 }
 
-.addtask > label {
+.addTask > label {
   font-weight: 600;
 }
-.addtask > hr {
+.addTask > hr {
   width: 40px;
   height: 10px;
   border-radius: 5px;
   background-color: rgb(0, 0, 18);
 }
-.addtask > input {
+.addTask > input {
   border: 0px !important;
   outline: 0;
   padding: 5px 10px;
@@ -45,7 +45,7 @@ body {
   margin-top: 8px;
 }
 
-.addtask .note-btn {
+.addTask .note-btn {
   align-self: left;
   border: none;
   border-radius: 5px;
@@ -59,7 +59,7 @@ body {
   margin-top: 25px;
 }
 
-.addtask button:hover {
+.addTask button:hover {
   background-color: #4cc9f0;
 }
 
@@ -176,35 +176,35 @@ body {
   padding-top: 0.4rem;
 }
 
-#edittask {
+#editNote {
   width: 70%;
   margin: auto;
   margin-top: 1rem;
   padding-left: -3rem;
 }
 
-#edittask > img {
+#editNote > img {
   margin-left: 5rem;
   width: 30%;
 }
 
-#edittask > label {
+#editNote > label {
   font-size: 1.5rem;
   text-align: center;
 }
 
-#edittask > .card {
+#editNote > .card {
   background-color: #e773ad6b;
   margin-top: 1rem;
 }
 
-#edittask > .card > label {
+#editNote > .card > label {
   margin-top: 0.7rem;
   margin-left: 0.6rem;
   font-size: 1.4rem;
 }
 
-#edittask > .card > input {
+#editNote > .card > input {
   background-color: #38307ebd;
   border: 0px;
   border-radius: 3px;
@@ -213,30 +213,30 @@ body {
   padding: 5px 8px;
 }
 
-#edittask > .card > input::placeholder {
+#editNote > .card > input::placeholder {
   color: #bcb0b0eb;
 }
 
-#edittask button {
+#editNote button {
   margin-top: 1rem;
   width: 5rem;
   margin: auto;
 }
 
-#edittitle {
+#editTitle {
   margin-top: 1rem;
   margin-left: 0.3rem;
   margin-right: 0.3rem;
 }
 
-#edittext {
+#editText {
   margin-top: 1rem;
   margin-left: 0.3rem;
   margin-right: 0.3rem;
   height: 3rem;
 }
 
-#edittask .save-button {
+#editNote .save-button {
   background-color: #f7258496;
   border: 0px;
   border-radius: 3px;
@@ -265,7 +265,7 @@ body {
 }
 
 @media screen and (min-width: 375px) {
-  .addtask {
+  .addTask {
     width: 90%;
   }
 
@@ -273,20 +273,20 @@ body {
     margin-left: 1rem;
   }
 
-  #edittask {
+  #editNote {
     width: 90%;
   }
 
-  #edittask img {
+  #editNote img {
     width: 15%;
     margin-left: 1rem;
   }
 
-  #edittask > label {
+  #editNote > label {
     font-size: 1rem;
   }
 
-  #edittask > .card {
+  #editNote > .card {
     margin-top: -0.1rem;
   }
 }
@@ -316,7 +316,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .addtask {
+  .addTask {
     width: 70%;
   }
 
@@ -362,11 +362,11 @@ body {
     padding-left: 12rem;
   }
 
-  #edittask {
+  #editNote {
     width: 70%;
   }
 
-  #edittask > label {
+  #editNote > label {
     font-size: 1.5rem;
   }
 }
@@ -393,19 +393,19 @@ body {
     }
   }
 
-  .addtask {
+  .addTask {
     width: 45%;
   }
 
-  .addtask > label {
+  .addTask > label {
     font-size: 1.4rem;
   }
 
-  .addtask > input {
+  .addTask > input {
     padding: 0.5rem;
   }
 
-  .addtask .note-btn {
+  .addTask .note-btn {
     padding: 8px 25px;
     font-size: 1rem;
   }
@@ -439,15 +439,15 @@ body {
     font-size: 0.6rem;
   }
 
-  #edittask {
+  #editNote {
     width: 45%;
   }
 
-  #edittask > label {
+  #editNote > label {
     font-size: 1.4rem;
   }
 
-  #edittask .save-button {
+  #editNote .save-button {
     padding: 1rem;
     border-radius: 0.5rem;
     text-transform: uppercase;
@@ -467,7 +467,7 @@ body {
     }
   }
 
-  .addtask {
+  .addTask {
     width: 45%;
   }
 
@@ -479,7 +479,7 @@ body {
     padding-left: 40rem;
   }
 
-  #edittask {
+  #editNote {
     width: 45%;
   }
 }
