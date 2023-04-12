@@ -1,7 +1,5 @@
 document.getElementById("edittask").style.display = "none";
 
-let fetchedTitle = "";
-
 let display = () => {
   const url = "http://127.0.0.1:5501/read";
   fetch(url)
