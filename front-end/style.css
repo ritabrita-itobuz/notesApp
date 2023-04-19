@@ -293,8 +293,8 @@ body {
 
 @media screen and (min-width: 425px) {
   .app-name {
-    animation: cursor 1s step-start infinite,
-      text 3s steps(20) alternate infinite;
+    /* animation: cursor 1s step-start infinite,
+      text 3s steps(20) alternate infinite; */
   }
 
   @keyframes cursor {

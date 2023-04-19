@@ -2,8 +2,12 @@ import * as mongoose from "mongoose";
 import * as Cors from "cors";
 import express, { request } from "express";
 
-const app = express();
 
+// object des
+// import
+// middleware next node js
+
+const app = express();
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -32,7 +36,7 @@ mongoose
     console.log("Connected...");
   });
 
-const todoSchema = new mongoose.Schema({
+const noteSchema = new mongoose.Schema({
   taskname: {
     type: String,
   },
@@ -41,19 +45,23 @@ const todoSchema = new mongoose.Schema({
   },
 });
 
-const Todo = mongoose.model("Todo", todoSchema);
+const note = mongoose.model("note", noteSchema);
 
 app.get("/read", async (req, res) => {
-  const data = await Todo.find({});
+  const data = await note.find({});
   try {
     res.send(data);
   } catch (error) {
-    res.status(500).send(error);
+    res.status(500).send({
+      data: null, 
+      message: error.messge,
+      success: false
+    });
   }
 });
 
 app.post("/create", async (req, res) => {
-  const data = new Todo(req.body);
+  const data = new note(req.body);
   console.log(data);
   try {
     await data.save();
@@ -65,8 +73,8 @@ app.post("/create", async (req, res) => {
 
 app.patch("/update/:id", async (req, res) => {
   try {
-    await Todo.findByIdAndUpdate(req.params.id, req.body);
-    await Todo.save();
+    await note.findByIdAndUpdate(req.params.id, req.body);
+    await note.save();
     res.send(data);
   } catch (error) {
     res.status(500).send(error);
@@ -75,8 +83,8 @@ app.patch("/update/:id", async (req, res) => {
 
 app.put("/updatetask/:id", async (req, res) => {
   try {
-    await Todo.findByIdAndUpdate(req.params.id, req.body);
-    await Todo.save();
+    await note.findByIdAndUpdate(req.params.id, req.body);
+    await note.save();
     res.send(data);
   } catch (error) {
     res.status(500).send(error);
@@ -85,7 +93,7 @@ app.put("/updatetask/:id", async (req, res) => {
 
 app.delete("/delete/:id", async (req, res) => {
   try {
-    const data = await Todo.findByIdAndDelete(req.params.id);
+    const data = await note.findByIdAndDelete(req.params.id);
 
     if (!data) res.status(404).send("No item found");
     res.status(200).send();
